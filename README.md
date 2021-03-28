@@ -1,5 +1,5 @@
 # Student-MarkSheet
-This is a **Mini project** that shows tha Marksheet of a Student when the **Login**
+This is a **Mini project** that shows tha Marksheet of a Student when they **Login**
 ## Installation
 ```
 npm install
