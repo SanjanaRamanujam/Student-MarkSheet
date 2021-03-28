@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>user</title>
+        <link rel="stylesheet" href="/css/user.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Mark1</th>
+                <th>Mark2</th>
+                <th>Mark3</th>
+                <th>Average_Score</th>
+            </tr>
+            <% if(userdata.length !=0){%>
+                <%var i=1;%>
+                <%userdata.forEach(function(data){%>
+            <tr>
+                <td><%=i;%></td>
+                <td><%=data.fname %></td>
+                <td><%=data.lname %></td>
+                <td><%=data.email %></td>
+                <td><%=data.mark1 %></td>
+                <td><%=data.mark2 %></td>
+                <td><%=data.mark3 %></td>
+                <td><%=Math.round((data.mark1+data.mark2+data.mark3)/3)%></td>
+            </tr>
+            <%i++;})%>
+            <%}else{%>
+                <tr>
+                    <td colspan="8">No Data Found</td>
+                </tr>
+                <%}%>
+        </table>
+    </body>
+</html>
